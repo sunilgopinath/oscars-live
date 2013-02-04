@@ -10,7 +10,7 @@ io.on('posts:create', function(data) {
 $(function() {
     $("#winners").submit(function (event) {
         event.preventDefault();
-        data = { post: '{' + $("#firstname").val() + '}'};
+        data = { post: '{' + $("#firstname").val() + ' ' + $("#lastname").val() + '}'};
         io.emit('posts:create', data)
     })    
 })
